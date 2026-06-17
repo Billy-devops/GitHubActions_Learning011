@@ -5,18 +5,16 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
 
-    - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo "Hello DevOps Insiders"
 
-    - name: Run a one-line script
-      run: echo "Hello DevOps Insiders"
-
-    - name: Run a multi-line script
-      run: |
-        echo "Build Started"
-        echo "Testing"
-        echo "Done"
+      - name: Run a multi-line script
+        run: |
+          echo "Build Started"
+          echo "Testing"
+          echo "Done"
